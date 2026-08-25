@@ -33,12 +33,11 @@ The talk covers:
 .
 ├── README.md
 ├── slides/
-│   ├── reflection.tex
-│   ├── references.bib
-│   └── figures/
+│   ├── demo.tex
+│   └── Cpp26_reflections_GautamGhosh.pdf
 └── examples/
-    ├── 01_reflection.cpp
-    ├── 02_splicer.cpp
+    ├── 01_splicer.cpp
+    ├── 02_reflection.cpp
     ├── 03_xml_parser.cpp
 ```
 
