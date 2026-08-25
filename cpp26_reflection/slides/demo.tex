@@ -1,0 +1,166 @@
+\documentclass{beamer}
+
+\usetheme{simple}
+
+\usepackage{lmodern}
+\usepackage[scale=2]{ccicons}
+
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sorting=none
+]{biblatex}
+
+\addbibresource{references.bib}
+
+% TODO: 
+%   position adjustement
+%   change colours
+%       
+
+% Watermark background (simple theme)
+
+\setwatermark{\includegraphics[height=8cm]{img/Heckert_GNU_white.png}}
+
+
+\title{Cpp26: Reflection}
+\subtitle{}
+\date{\today}
+\author{Gautam Ghosh}
+\institute{University of Stuttgart}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{}
+
+  \begin{block}{}
+  \begin{center}{\textbf{DISCLAIMER:}}\end{center}
+  \begin{center}{AI tools were used to assist with the preparation of this presentation. It was used for the following tasks:
+  \begin{itemize}
+      \item Navigating documentation.
+      \item Writing LaTeX code.
+  \end{itemize}
+    }\end{center}
+
+  \begin{center}{All C++ code has been written and reviewed by the Author.}\end{center}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}{}
+
+  \begin{block}{}
+  \begin{center}{"There is no point in developing software unless you care about doing it well."}\end{center}
+
+  \begin{center}{Andrew Hunt, David Thomas, The Pragmatic Programmer}\end{center}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}[plain]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=\paperheight,
+        keepaspectratio
+    ]{img/meme.png}
+\end{frame}
+
+\begin{frame}{The Reflection operator}
+
+  \begin{itemize}
+        \item Operator syntax: \textbf{\^\^}
+        \item Proposed in the paper P2996R13.
+        \item Encapsulates compile-time information about a C++ entity using the \textbf{std::meta::info} type.\textsuperscript{[2]}
+        
+    \end{itemize}
+    \centering
+        \includegraphics[
+            width=\textwidth,
+            height=0.6\textheight,
+            keepaspectratio
+        ]{img/reflection}
+\end{frame}
+
+\begin{frame}{The Splice operator}
+
+    \begin{itemize}
+        \item Operator syntax: \textbf{[:\textit{reflection}:]}
+        \item Proposed in the paper P2996R13.
+        \item Enables converting \textbf{std::meta::info} object into \textbf{source code}.\textsuperscript{[2]}
+        \item Example:
+        
+    \end{itemize}
+        \centering
+        \includegraphics[
+            width=\textwidth,
+            height=0.85\textheight,
+            keepaspectratio
+        ]{img/splicer}
+  
+\end{frame}
+
+\begin{frame}{The Expansion Statement}
+
+    \begin{itemize}
+        \item Proposed in the paper P1306R5.
+        \item Enables unrolling for loops at compile time.
+        \item The compound-statement does not need to be \textbf{constexpr}.
+        \item Example:\textsuperscript{[1]}
+        
+    \end{itemize}
+        \centering
+        \includegraphics[
+            width=\textwidth,
+            height=0.85\textheight,
+            keepaspectratio
+        ]{img/expansion_statement}
+\end{frame}
+
+\begin{frame}{References}
+    \footnotesize
+
+    \begin{enumerate}
+        \item \textbf{Expansion Statements}\newline
+        \url{https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p1306r5.html#expansion-over-tuples}
+
+        \item \textbf{Reflection for C++26}\newline
+        \url{https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2996r13.html#stdmetainfo}
+
+        \item \textbf{cppreference}\newline
+        \url{https://en.cppreference.com/cpp/header/meta}
+
+        \item \textbf{C++26 reflection at compile-time}\newline
+        \url{https://andreasfertig.com/blog/2025/08/cpp26-reflection-at-compile-time/}
+
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[plain]
+    \centering
+
+    \vspace{1.5cm}
+
+    {\Huge\textbf{Thank You!}}
+
+    \vspace{0.8cm}
+
+    {\Large Questions?}
+
+    \vspace{1cm}
+
+    {\normalsize
+    Code available on GitHub:
+    }
+
+    \vspace{0.4cm}
+
+    \includegraphics[
+        width=4cm
+    ]{img/cpp26_reflection_qr.png}
+
+\end{frame}
+
+\end{document}
