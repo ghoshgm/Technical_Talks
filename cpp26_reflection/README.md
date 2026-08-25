@@ -54,7 +54,7 @@ provided by `libxml2`.
 > **Note:** C++26 reflection is a relatively new language feature and compiler support is still evolving. The examples may therefore require a sufficiently recent compiler or specific experimental compiler options.
 
 ## Building the Examples
-To build ```01_reflection.cpp``` and ```02_splicer.cpp```  
+To build ```02_reflection.cpp``` and ```01_splicer.cpp```  
 ```bash
 g++-16 -std=c++26 -freflection path/to/source/file
 ```
